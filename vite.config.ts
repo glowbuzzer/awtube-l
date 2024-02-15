@@ -4,9 +4,10 @@
 
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
+import {viteDracoPlugin} from "./vite-draco-plugin"
 
 export default defineConfig({
-    plugins: [react()],
+    plugins: [react(), viteDracoPlugin()],
     build: {
         outDir: "./build/awtube"
     }

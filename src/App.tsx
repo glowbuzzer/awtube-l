@@ -13,14 +13,15 @@ import {
     JointJogTileDefinition,
     JointTorqueModesTileDefinition,
     PointsTileDefinition,
+    SerialCommunicationsTileDefinition,
     TelemetryTileDefinition,
     ThreeDimensionalSceneTileDefinition
 } from "@glowbuzzer/controls"
 import * as React from "react"
-import { AwRobotSceneTile } from "./tiles/AwRobotSceneTile"
-import { AppMenu } from "./AppMenu"
-import { AwTubeStatusTileDefinitionBuilder, RgbStateHandler } from "@glowbuzzer/awlib"
-import { SimpleMoveTile } from "./tiles/SimpleMoveTile"
+import {AwRobotSceneTile} from "./tiles/AwRobotSceneTile"
+import {AppMenu} from "./AppMenu"
+import {AwTubeStatusTileDefinitionBuilder, RgbStateHandler} from "@glowbuzzer/awlib"
+import {SimpleMoveTile} from "./tiles/SimpleMoveTile"
 
 const AwRobotSceneTileDefinition = DockTileDefinitionBuilder(ThreeDimensionalSceneTileDefinition)
     .render(() => <AwRobotSceneTile />)
@@ -54,6 +55,7 @@ export const App = () => {
                         showToolOutputs: true
                     }),
                     SimpleMoveTileDefinition,
+                    SerialCommunicationsTileDefinition,
                     JointTorqueModesTileDefinition,
                     EmStatTileDefinition,
                     IntegerOutputsTileDefinition

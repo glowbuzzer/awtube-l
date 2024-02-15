@@ -1,7 +1,7 @@
 import * as React from "react"
 import {createRoot} from "react-dom/client"
 
-import {GlowbuzzerApp} from "@glowbuzzer/controls"
+import {GlowbuzzerApp, SerialCommunicationsProvider} from "@glowbuzzer/controls"
 import {App} from "./App"
 
 import "antd/dist/reset.css"
@@ -12,6 +12,8 @@ const root = createRoot(document.getElementById("root")!)
 
 root.render(
     <GlowbuzzerApp appName="awtube-l">
-        <App/>
+        <SerialCommunicationsProvider>
+            <App/>
+        </SerialCommunicationsProvider>
     </GlowbuzzerApp>
 )
