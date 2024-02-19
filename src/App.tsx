@@ -29,7 +29,7 @@ const AwRobotSceneTileDefinition = DockTileDefinitionBuilder(ThreeDimensionalSce
 
 const SimpleMoveTileDefinition = DockTileDefinitionBuilder()
     .id("aw-simple-move")
-    .name("Simple Move")
+    .name("Cartesian Move")
     .render(() => <SimpleMoveTile />)
     .build()
 
